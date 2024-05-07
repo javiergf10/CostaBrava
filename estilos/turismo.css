@@ -1,0 +1,325 @@
+body {
+    /*Esto es para los 3 formatos*/
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    margin-top: 0;
+    color: #e79e3e;
+    text-align: center;
+    font-size: 300%;
+    font-weight: bold;
+}
+
+h2 {
+    color: #e79e3e;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 1201px) {
+
+    body {
+        font-family: Arial, sans-serif;
+        margin-top: 200px;
+        background-image: url(https://www.oliverstravels.com/blog/wp-content/uploads/2020/05/iStock-509288876.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        /*esto hace que la imagen se pegue al fondo*/
+    }
+
+    main {
+        
+        column-count: 3;
+        margin-top: 20%;
+        margin: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    header {
+        position: fixed;
+        height: 180px;
+        width: 100%;
+        top: 0;
+        background-color: beige;
+
+    }
+
+    section {
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        background-color: rgb(210, 236, 228);
+        break-inside: avoid-column;
+        /*Esta cosa maravillosa evita que se me corten las columnas*/
+    }
+
+    section h2 {
+        margin-top: 1%;
+    }
+
+    #descripcion {
+        border-radius: 5%;
+        /*Esto es lo de los bordes*/
+    }
+
+    #alojamiento {
+        padding-top: 0.003%;
+        margin-top: 2%;
+        /*Por alguna razón, s eme peguaba arriba*/
+        border-radius: 12%;
+    }
+
+    img {
+        margin: 0 auto;
+        margin-top: 20px;
+        height: 300px;
+        clear: both;
+        /*Tiene la propiedad clear, pero no hace nada*/
+        max-height: 100%;
+        max-width: 100%;
+        /*Estás dos hacen que las imagenes se adapten a su contenedor en caso de que este sea mas pequeño*/
+    }
+
+    ul {
+        padding: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    ul li a {
+        text-decoration: underline;
+        color: #9c34d8;
+
+    }
+
+    footer {
+        background-color: aqua;
+        text-align: center;
+
+        /*Quería comprobar si funciona y, funciona*/
+        #cool {
+            color: rebeccapurple;
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    body {
+        font-size: 90%;
+
+        background-image: url("../Imagenes/Cadaques_sunrise.jpg");
+    }
+
+
+
+    nav ul h2 {
+        display: none;
+        /*Hacemos como que no existe*/
+    }
+
+    section {
+        position: relative;
+        /*Se posiciona en relacion al flujo de la pagina. Float no fuunciona si es absoluta*/
+        float: right;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 1%;
+        width: 35%;
+        text-align: center;
+        background-color: rgb(210, 236, 228);
+    }
+
+    #descripcion,
+    #atractivostur,
+    #actividades {
+        float: left;
+    }
+
+    #descripcion {
+        /*Aqui no puedo usar porcentajes*/
+        background-image: url("../Imagenes/aventura.jpg");
+        border-top: 5px dashed;
+        border-bottom: 5px dashed;
+        border-color: rgb(88, 90, 238);
+        color: #143603;
+        font-weight: bold;
+    }
+
+    #lugaresInteres {
+        border-color: #9c34d8;
+        border-width: 3px;
+        border-style: groove;
+    }
+
+    #atractivostur {
+        border-color: #d82e2e;
+        border-width: 5px;
+        border-style: dotted;
+    }
+
+    #actividades {
+        border-width: 4px;
+        border-left: 4px double;
+        border-right: 4px double;
+        border-color: rgb(88, 90, 238);
+
+    }
+
+    #alojamiento {
+        border-width: 8px;
+        border-left: 8px solid;
+        border-right: 8px solid;
+        border-top: 8px ridge;
+        border-bottom: 8px ridge;
+        border-color: rgb(88, 90, 238);
+
+
+    }
+
+
+    img {
+        margin: 0 auto;
+        margin-top: 20px;
+        /*Tiene la propiedad clear, pero no hace nada*/
+        max-height: 100%;
+        max-width: 100%;
+        /*Estás dos hacen que las imagenes se adapten a su contenedor en caso de que este sea mas pequeño*/
+    }
+
+    ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    ul li a {
+        font-weight: bold;
+        color: rgb(116, 22, 211);
+
+    }
+
+    nav {
+        top: 0%;
+        background-image: url("../Imagenes/Mapa\ Costa\ Brava.jpg");
+        background-size: cover;
+        right: 5%;
+        text-align: center;
+    }
+
+
+    footer {
+
+        position: relative;
+        border-image-source: url('../Imagenes/parques.jpg');
+        /* Especifica la ruta de la imagen */
+        border-image-slice: 20;
+        /* Define cómo se cortará la imagen para formar los bordes */
+        border-image-width: 20px;
+        /* Define el ancho del borde generado a partir de la imagen */
+        border-image-outset: 10px;
+        clear: both;
+        /*con esto no se ve afectado por los floats*/
+        background-color: aqua;
+
+        /*Quería comprobar si funciona y, funciona*/
+        #cool {
+            color: rebeccapurple;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 80%;
+        top: 0;
+        background-image: url("../Imagenes/tour-vaixell-roses-illes-medes-estartit--5-.jpg");
+    }
+
+    HEADER {
+        margin-top: 0%;
+        top: 0;
+        background-color: white;
+        opacity: 80%;
+    }
+
+    nav ul h2 {
+        display: none;
+        /*Hacemos como que no existe*/
+    }
+
+    ul li {
+        display: inline;
+        margin-right: 20px;
+
+        a {
+            font-weight: bold;
+            color: #e79e3e
+        }
+    }
+
+    nav {
+        top: 0%;
+        background-size: cover;
+    }
+
+    section h2:first-child {
+        /*para coger el primer h2*/
+        text-decoration: underline;
+        text-decoration-color: #e79e3e;
+    }
+
+    section {
+        /*Se posiciona en relacion al flujo de la pagina. Float no fuunciona si es absoluta*/
+        padding: 1% 5% 2% 5%;
+        /*Arriba, derecha, abajo, izquierda*/
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 1%;
+        text-align: center;
+        background-color: rgba(184, 189, 119, 0.8);
+        /*El 0.5 es para la opacidad*/
+    }
+
+    img {
+        margin: 0 auto;
+        margin-top: 20px;
+        /*Tiene la propiedad clear, pero no hace nada*/
+        max-height: 100%;
+        max-width: 100%;
+        /*Estás dos hacen que las imagenes se adapten a su contenedor en caso de que este sea mas pequeño*/
+    }
+
+    footer {
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 0;
+        bottom: 0;
+        /*Quería comprobar si funciona y, funciona*/
+        #cool {
+            color: rebeccapurple;
+        }
+    }
+}
